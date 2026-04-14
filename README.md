@@ -72,9 +72,8 @@ Start the three Apollo modules: planning, control and dreamview_plus.
 python carla_apollo_bridge/carla_bridge/main.py
 
 
+![carla_apollo11 0_bridge](https://github.com/user-attachments/assets/6f399fc8-55ad-431b-8683-935081b52ea6)
 
-
-![carla_apollo11 0_bridge](https://github.com/user-attachments/assets/4e9173e3-6338-44f0-a9f3-a6b147338fe4)
 
 
 
