@@ -14,6 +14,8 @@ clone the repository in the path apollo/modules outside the container
 1.Environment Variable Configuration
 
 Enter the Apollo container and modify /home/$USER/.bashrc.
+
+
 Append the following to the end of the file:
 
 ```
