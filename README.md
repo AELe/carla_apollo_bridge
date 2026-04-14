@@ -2,6 +2,7 @@
 
 
 To make it compatible with Apollo 11.0, I have modified the original repository: https://github.com/guardstrikelab/carla_apollo_bridge.
+
 Additionally, the environment configuration has also been changed.
 
 You can configure it by following the steps below:
