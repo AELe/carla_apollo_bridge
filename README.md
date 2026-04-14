@@ -1,4 +1,7 @@
-To make it compatible with Apollo 10.0, I have modified the original repository: https://github.com/guardstrikelab/carla_apollo_bridge.
+# Based on Apollo11.0
+
+
+To make it compatible with Apollo 11.0, I have modified the original repository: https://github.com/guardstrikelab/carla_apollo_bridge.
 Additionally, the environment configuration has also been changed.
 
 You can configure it by following the steps below:
@@ -13,21 +16,12 @@ clone the repository in the path apollo/modules
 Enter the Apollo container and modify /home/$USER/.bashrc.
 Append the following to the end of the file:
 
-export PYTHONPATH=$PYTHONPATH/opt/apollo/neo/lib/cyber
-
-export PYTHONPATH=$PYTHONPATH:/opt/apollo/neo/lib/cyber/python/internal
-
-export PYTHONPATH=$PYTHONPATH:/apollo_workspace/modules/carla_apollo10.0_bridge
-
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/apollo/neo/lib
-
-export PYTHONPATH=$PYTHONPATH:/opt/apollo/neo/lib/cyber/python
-
-export PYTHONPATH=$PYTHONPATH:/apollo
-
-export PYTHONPATH=$PYTHONPATH:/apollo/modules
-
-export PYTHONPATH=$PYTHONPATH:/apollo_workspace/bazel-bin
+```
+export PYTHONPATH=$PYTHONPATH:/apollo/modules/carla_apollo_bridge/carla_bridge/carla_api/carla-0.9.15-py3.7-linux-x86_64.egg
+export PYTHONPATH=$PYTHONPATH:/apollo/bazel-bin
+export PYTHONPATH=$PYTHONPATH:/apollo/modules/carla_apollo_bridge
+export PYTHONPATH=$PYTHONPATH:/apollo/cyber/python
+```
 
 
 2.Install the dependencies required for carla_bridge
@@ -36,15 +30,9 @@ cd carla_apollo10.0_bridge/carla_bridge
 
 
 cp -r map/. /apollo/modules/map/data
+
+
 pip3 install -r requirements.txt
-
-Execute the following commands within the Apollo container:
-
-pip3 install "numpy<2.0" -i https://pypi.tuna.tsinghua.edu.cn/simple
-
-pip3 install carla==0.9.15 -i https://pypi.tuna.tsinghua.edu.cn/simple
-
-pip3 install "opencv-python<4.10" -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 
 3.Download CARLA_0.9.15.tar.gz
@@ -62,7 +50,7 @@ start the three Apollo modules: planning, prediction, and control.
 
 3.Inside the container, start the carla_bridge:
 
-python3 carla_apollo10.0_bridge/carla_bridge/main.py
+python3 carla_apollo_bridge/carla_bridge/main.py
 
 
 
