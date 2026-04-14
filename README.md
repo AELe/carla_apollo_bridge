@@ -26,7 +26,7 @@ export PYTHONPATH=$PYTHONPATH:/apollo/cyber/python
 
 2.Install the dependencies required for carla_bridge
 
-cd carla_apollo10.0_bridge/carla_bridge
+cd carla_apollo_bridge/carla_bridge
 
 
 cp -r map/. /apollo/modules/map/data
