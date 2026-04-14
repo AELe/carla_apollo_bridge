@@ -44,7 +44,23 @@ https://github.com/carla-simulator/carla/releases
 Running Instructions:
 
 1.Inside the container, compile data modules
-start the three Apollo modules: planning, prediction, and control.
+
+Modify channel name where use the "/apollo/canbus/chassis" to "/apollo/canbus/carla/chassis"
+```
+part 1
+modules/control/control_component/control_component.cc
+chassis_reader_config.channel_name = "/apollo/canbus/carla/chassis";
+
+part 2
+modules/external_command/command_processor/action_command_processor/conf/config.pb.txt
+command_status_name: "/apollo/canbus/carla/chassis"
+
+part 3
+modules/planning/planning_component/conf/planning_config.pb.txt
+chassis_topic: "/apollo/canbus/carla/chassis"
+```
+
+Start the three Apollo modules: planning, control and dreamview_plus.
 
 2.Outside the container, launch CarlaUE4 with the specified port:
 
