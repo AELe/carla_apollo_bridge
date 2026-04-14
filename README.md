@@ -8,7 +8,7 @@ You can configure it by following the steps below:
 
 Prerequisite: A running Apollo Docker container must already be deployed
 
-clone the repository in the path apollo/modules
+clone the repository in the path apollo/modules outside the container
 
 
 1.Environment Variable Configuration
@@ -50,7 +50,7 @@ start the three Apollo modules: planning, prediction, and control.
 
 3.Inside the container, start the carla_bridge:
 
-python3 carla_apollo_bridge/carla_bridge/main.py
+python carla_apollo_bridge/carla_bridge/main.py
 
 
 
