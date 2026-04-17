@@ -10,7 +10,7 @@
 Classes to handle Carla gnsss
 """
 
-from cyber.python.cyber_py3 import cyber_time
+from cyber_py3 import cyber_time
 from modules.common_msgs.localization_msgs.gps_pb2 import Gps
 from modules.common_msgs.sensor_msgs.gnss_best_pose_pb2 import GnssBestPose
 from modules.common_msgs.sensor_msgs.heading_pb2 import Heading

@@ -21,7 +21,7 @@ except ImportError:
 from abc import abstractmethod
 from threading import Lock
 
-from cyber.python.cyber_py3 import cyber_time
+from cyber_py3 import cyber_time
 from modules.common_msgs.sensor_msgs.conti_radar_pb2 import ContiRadar
 from modules.common_msgs.sensor_msgs.pointcloud_pb2 import PointCloud
 from modules.common_msgs.transform_msgs.transform_pb2 import TransformStamped

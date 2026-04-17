@@ -8,7 +8,7 @@ Classes to handle Carla imu sensor
 """
 
 
-from cyber.python.cyber_py3 import cyber_time
+from cyber_py3 import cyber_time
 from modules.common_msgs.localization_msgs.imu_pb2 import CorrectedImu
 
 from carla_bridge.sensor.sensor import Sensor
